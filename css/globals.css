@@ -215,6 +215,14 @@ footer {
 	.carrinho-box {
 		position: static;
 	}
+
+	#contato {
+		flex-direction: column;
+	}
+
+	iframe {
+		max-width: 90vw;
+	}
 }
 
 .bg-login {
