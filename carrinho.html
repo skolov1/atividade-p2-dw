@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Seu Pedido - Palantos</title>
+		<link
+			rel="stylesheet"
+			href="css/globals.css" />
+		<script
+			src="js/pedido.js"
+			defer></script>
+	</head>
+	<body>
+		<header>
+			<div class="logo">
+				<h1>Carrinho de Compras 🛒</h1>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="index.html">Voltar para Home</a></li>
+					<li>
+						<a
+							href="login.html"
+							style="color: #ff6b6b"
+							>Sair</a
+						>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<div class="container layout-pedido">
+			<section class="lista-compra">
+				<h2>Escolha seus mantos:</h2>
+
+				<div class="item-compra">
+					<img
+						src="./images/palmeiras-1.png"
+						alt="Palmeiras Goleiro Camisa Home" />
+					<div class="detalhes">
+						<h3>Camisa Palmeiras I</h3>
+						<p>Preço: R$ 350,00</p>
+						<button
+							onclick="adicionar('Camisa Palmeiras I', 350.00, './images/palmeiras-1.png')">
+							Adicionar ao Pedido
+						</button>
+					</div>
+				</div>
+
+				<div class="item-compra">
+					<img
+						src="./images/santos-1.png"
+						alt="Santos Home" />
+					<div class="detalhes">
+						<h3>Camisa Santos I</h3>
+						<p>Preço: R$ 350,00</p>
+						<button
+							onclick="adicionar('Camisa Santos I', 350.00, './images/santos-1.png')">
+							Adicionar ao Pedido
+						</button>
+					</div>
+				</div>
+
+				<div class="item-compra">
+					<img
+						src="./images/santos-2.png"
+						alt="Camisa do CBJR" />
+					<div class="detalhes">
+						<h3>Camisa Treino SEP</h3>
+						<p>Preço: R$ 200,00</p>
+						<button
+							onclick="adicionar('Camisa Treino', 200.00, './images/santos-2.png')">
+							Adicionar ao Pedido
+						</button>
+					</div>
+				</div>
+			</section>
+
+			<section class="carrinho-area">
+				<div class="carrinho-box">
+					<h2>Seu Pedido</h2>
+					<hr />
+					<ul id="lista-carrinho">
+						<li
+							type="none"
+							id="msg-vazio">
+							Seu carrinho está vazio...
+						</li>
+					</ul>
+
+					<div class="total-area">
+						<h3>Total: R$ <span id="total-valor">0.00</span></h3>
+					</div>
+
+					<button
+						class="btn-finalizar"
+						onclick="finalizarPedido()">
+						Finalizar Pedido
+					</button>
+				</div>
+			</section>
+		</div>
+	</body>
+</html>
+
